@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Webpage</title>
+</head>
+<style>
+ul{
+font-family:Ariel,sans-serif;
+font-size:25px;
+margin:0;
+padding:0;
+}
+li ul{
+display:none;}
+
+ul li{
+display:block;
+position:relative;
+float:left;
+}
+
+ul li a{
+display:block;
+text-decoration:none;
+color:black;
+
+border-top:1px solid green;
+padding: 25px 35px 25px 35px;
+background-color:green;
+margin-left:1px;
+white-space:nowrap;
+ }
+ 
+ ul li a:hover{
+ background-color:red;
+ }
+ li:hover ul{
+ display:block;
+ position:absolute;
+ }
+ 
+ li:hover li{
+ float: none;
+ font-size:15px;
+ }
+ 
+ li:hover a{
+ background-color:green;
+ }
+ li:hover li a:hover{
+ background-image:url("img3.gif");
+ color:white;
+ }
+  
+</style>
+
+<body>
+<div style="background-color :Green; Width: 100%; height :30%; float:top;"  ><pr><center><font size=25 >Welcome to Shop4mHome.com</font></center></pr>
+
+<div style= "background-color:Green; float:center; Width:100%; height:10%;" ><marquee><h2><img src=img.gif " alt="Welcome to my online grocery shopping...Hope You can find what you are looking for....."></img></h2></marquee></div>
+<br><br><br><br>
+
+<ul id="Menu">                                                       
+
+ <li><a href="#">Home</a></li>
+
+ <li><a href="#">Products</a>
+ <ul>
+ <li><a href="#">Dairy Products</a></li>
+ <li><a href="#">Vegetables</a></li>
+ <li><a href="#">Meat</a></li>
+ </ul></li>
+
+ <li><a href="#">Order by</a>
+ <ul>
+ <li><a href="#">Mobile</a></li>
+ <li><a href="#">E-mail</a></li>
+ <li><a href="App.html">Any Messenger App</a></li>
+ </ul></li>
+
+ <li><a href="#">Contact us</a></li>
+
+ <li><a href="#">About us</a>
+ <ul>
+ <li><a href="details.html">Online Grocery Shopping Store </a></li>
+ </ul></li>
+
+ </ul>
+
+<br><br><label>Add To Cart:</label><br>
+<select><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+</select>
+
+<img src=img2.gif alt="image" Width=100% Height=500></img>
+<div style= "background:Orange; float:Bottom; Width:60%; height:60%;" ><h2>
+<form>Comments:>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="date"><br><br>
+
+<textarea type="text"  cols="95" rows="5"></textarea>&nbsp&nbsp&nbsp
+<input type="submit">
+</form>
+</div>
+<frameset rows="10%,18%">
+  <frame name="Main" src="new3.html">
+  <frame name="Top" src="">
+  <frame name="Bottom" src="">
+</frameset>
+<h3>Copyright.All rights reserved:2020</h3>
+</body>
+
+</html>
