@@ -13,9 +13,9 @@ int main()
 	sname=(char *)malloc(10);
 	sclass=(char *)malloc(10);
 	ssection=(char *)malloc(10);
-	do{
+label:	do{
 	
-	cout<<"\nDo you want to run the program?(enter 1 to run/enter 2 to exit)";
+	cout<<"\nDo you want to run the program?(enter 1 to run/enter 2 to exit):";
 	cin>>ch;
 	
 	switch(ch)
@@ -24,7 +24,7 @@ int main()
 			{
 				do{
 				
-			cout<<"\nAdd students(enter 1 to add students/enter 2 to print student's list')";
+			cout<<"\nAdd students(enter 1 to add students/enter 2 to print student's list/enter 3 to return to previous menu'):";
 			cin>>ch1;
 			switch(ch1)
 			{
@@ -74,7 +74,12 @@ int main()
 	 		
 		 }
 		break;
-		}}while(1);
+		case 3:
+			goto label;
+			break;
+			
+		} 
+		}while(1);
 	}
 		case 2:
 			{
