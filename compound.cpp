@@ -1,13 +1,13 @@
 #include<stdio.h>
 #include<iostream>
 #include<math.h>
-//#include<decimel.h>
+
 
 using namespace std;
 
 int main()
 {
-long double p,n,t,r,a,num,num1,num2,num3;
+float p,n,t,r,a,num,num1,num2,num3;
 int ch;
 do
 {
