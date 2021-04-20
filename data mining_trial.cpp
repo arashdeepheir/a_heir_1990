@@ -10,23 +10,23 @@ int agegroup(int x)
 	cout<<"enter your age group(age must be 16 and above)\n";
 	cin>>x;
 	
-	if(x>16&&x<28)
+	if(x>18&&x<25)
 	{
-		return 1;
+	//	return (calculate individual naives bayes probabaily);
 	}
 	
-	if(x>28&&x<40)
+	if(x>25&&x<40)
 	
 	{
-		return 2;
+	//	return (calculate individual naives bayes probabaily);
 	}
 	
 	else
 	
 	{
-		return 3;
+	//	return (calculate individual naives bayes probabaily);
 	}
-	 cout<<"\n Your age group is::"<<x
+	 
 	 
 	return x;
 	
@@ -43,14 +43,14 @@ char sex(char x)
 	if(x==male)
 	
 	{
-		return 4;
+	//	return (calculate individual naives bayes probabaily);
 		
 	}
 	if(x==female)
 	{
-		return 5;
+	//	return (calculate individual naives bayes probabaily);
 	}
-cout<<"\n Your sex is::"<<x;
+
 	return x;
 
 }
@@ -62,21 +62,21 @@ int income(int x)
 	cout<<"\n Enter your income range\n";
 	cin>>x;
 	
-	if(x>500)
+	if(x>10000&&x<20000)
 	
 	{
-		return 6;
+	//	return (calculate individual naives bayes probabaily);
 	}
 	
-	if(x>501&&x<5000)
+	if(x>20000&&x<40000)
 	
 	{
-		return 7;
+		//	return (calculate individual naives bayes probabaily);
 	}
 	
-	if (x>5001&&x<25000)
+	if (x>40000)
 	{
-		return 8;
+		//	return (calculate individual naives bayes probabaily);
 	}
 	
 	return x;
@@ -89,21 +89,8 @@ char genre(char x)
 cout<<"\n Enter Genre of Movie\n";
 cin>>x;
 
-if(x==romcom)
-{
-	return 9;
-}
-
-if(x==action)
-{
-	return 10;
-}
-
-if(x==documentry)
-{
-	return 11;
-}
-
+//if x ranges from x to 1 probabilty y (repaeat for other genre of movies)
+//create a large dataset of 40 to 50 entries then try with data mining which genre of movie a person might buy using naive bayes
 return x;
 
 }
@@ -117,7 +104,7 @@ void main()
 	agegroup(a);
 	sex(b);
 	income(c)
-	genre(d);
+	
 	
 	
 }
