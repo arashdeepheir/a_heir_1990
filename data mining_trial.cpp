@@ -7,7 +7,7 @@ int agegroup(int x)
 
 {
 	
-	cout<<"enter your age group(age must be 16 and above)\n";
+	cout<<"enter your age group(age must be 18 and above)\n";
 	cin>>x;
 	
 	if(x>18&&x<25)
