@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<iostream>
+#include<fstream>
 
 using namespace std;
 
@@ -12,19 +13,19 @@ int agegroup(int x)
 	
 	if(x>18&&x<25)
 	{
-	//	return (calculate individual naives bayes probability);
+		return 0.33;
 	}
 	
 	if(x>25&&x<40)
 	
 	{
-	//	return (calculate individual naives bayes probability);
+		return 0.33;
 	}
 	
 	else
 	
 	{
-	//	return (calculate individual naives bayes probability);
+		return 0.33;
 	}
 	 
 	 
@@ -37,18 +38,20 @@ int agegroup(int x)
 char sex(char x)
 
 {
+	
+	char m,f;
 	cout<<"\nEnter your sex\n";
 	cin>>x;
 	
-	if(x==male)
+	if(x==m)
 	
 	{
-	//	return (calculate individual naives bayes probability);
+	return 0.5;
 		
 	}
-	if(x==female)
+	if(x==f)
 	{
-	//	return (calculate individual naives bayes probability);
+	return 0.5;
 	}
 
 	return x;
@@ -65,18 +68,18 @@ int income(int x)
 	if(x>10000&&x<20000)
 	
 	{
-	//	return (calculate individual naives bayes probability);
+		return 0.33;
 	}
 	
 	if(x>20000&&x<40000)
 	
 	{
-		//	return (calculate individual naives bayes probability);
+			return 0.33;
 	}
 	
 	if (x>40000)
 	{
-		//	return (calculate individual naives bayes probability);
+		return 0.33;
 	}
 	
 	return x;
@@ -104,18 +107,34 @@ char datamining(char x)
 return x;	
 }
 
-void main()
+int file()
+ {
+	
+}
+
+int main()
 {
 	
 	int a,c;
-	char b,d;
+	char b,d,e;
 
 	agegroup(a);
 	sex(b);
-	income(c)
-	genre(d);
-	read(file);
-	write(file);
+	income(c);
+	e=genre(d);
+	fstream my_file;
+	my_file.open("filename.txt", ios::out);
+	if (!my_file) {
+		cout << "File not created!";
+	}
+	else {
+		cout << "File created successfully!";
+		my_file << "e";
+		my_file.close();
+	}
+	return 0;
+	ofstream MyFile("filename.txt");
+//	write(file);
 	
 	
 }
