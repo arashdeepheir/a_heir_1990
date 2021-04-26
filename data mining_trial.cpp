@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int agegroup(int x)
+float agegroup(float x)
 
 {
 	
@@ -58,7 +58,7 @@ char sex(char x)
 
 }
 
-int income(int x)
+float income(float x)
 
 {
 	
@@ -115,13 +115,15 @@ int file()
 int main()
 {
 	
-	int a,c;
-	char b,d,e;
-
-	agegroup(a);
-	sex(b);
-	income(c);
-	e=genre(d);
+	float a,c;
+	char b,d;
+	float age,inc;
+	char s,g;                 //take array???
+    
+	age=agegroup(a);
+	s=sex(b);
+	inc=income(c);
+	g=genre(d);
 	fstream my_file;
 	my_file.open("filename.txt", ios::out);
 	if (!my_file) {
@@ -129,7 +131,10 @@ int main()
 	}
 	else {
 		cout << "File created successfully!";
-		my_file << "e";
+		my_file <<age<<"\t";
+		my_file<<s<<"\t";
+		my_file<<inc<<"\t";
+		my_file<<g;
 		my_file.close();
 	}
 	return 0;
