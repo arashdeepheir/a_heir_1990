@@ -108,58 +108,60 @@ char datamining(char x)
 return x;	
 }
 
-int file()
+int file(int age,char s,int inc, char g)
  {
-	
-}
-
-int main()
-{
-	int ch,i;
-	float a,c;
-	char b,d;
-	float age,inc;
-	char s,g;                 //take array???
-cout<<"Enter your choice\n"<<"Enter 1 to enter data\Enter 2 to exit";
-cin>>ch;
-cout<<"enter 5 datasets";
-for(i=1;i<=5;i++)
-{
-
-cout<<"Enter your choice\n"<<"Enter 1 to enter data\Enter 2 to exit";
-cin>>ch;
-do{
-	switch(ch)
-	{
-	
-	case 1:
- {
-
-		   		
-	age=agegroup(a);
+ 	int a,c;
+ 	char b,d;
+ 	age=agegroup(a);
 	s=sex(b);
 	inc=income(c);
 	g=genre(d);
-	
-	
-	
-		fstream my_file;
+fstream my_file;
+		
+		
 	my_file.open("filename.txt", ios::out);
+	
+		my_file<<"\n";
 		my_file <<age<<"\t";
 		my_file<<s<<"\t";
 		my_file<<inc<<"\t";
 		my_file<<g;
 		my_file.close();
-	
-	if (!my_file) {
+		if (!my_file) {
 		cout << "File not created!";
 	}
 	else {
-		cout << "File updated successfully!";
+		cout << "File updated successfully!\n";
 	}
-	ofstream MyFile("filename.txt");
+
+	fstream MyFile("filename.txt");
+	return 0;
 }
-	break;
+
+int main()
+{
+	int ch;
+	float a,c;
+	char b,d;
+	float age,inc;
+	char s,g;                 //take array???
+
+cout<<"enter 5 datasets";
+
+do{
+cout<<"\nEnter your choice"<<"\nEnter 1 to enter data/Enter 2 to exit";
+cin>>ch;
+
+	switch(ch)
+	{
+	
+	case 1:
+ {
+file(a,b,c,d);
+	
+}
+
+ break;
 
 	case 2:
 		{
@@ -171,9 +173,8 @@ do{
 
 return 0;
 }
-}
 
-//	write(file);
+
 	
 	
 
