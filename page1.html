@@ -5,11 +5,11 @@
 div.picture1
 {
 margin: 6px;
-border: 1px solid red;
+border: 1px solid green;
 float: top;
 width: 100%;
 height: auto%;
-background-color :blue;
+background-color :green;
 }
 
 div.picture1:hover
@@ -21,15 +21,15 @@ background-image: url("img11.gif")
 div.picture2 
 {
 margin: 5px;
-border: 1px solid pink;
+border: 1px solid green;
 float: left;
 width: 100%;
-background-color:red;
+background-color:#33FFB5;
 }
 
 div.picture2:hover {
 border: 1px solid yellow;
-background-color:cyan;
+background-image:url("img11.gif");
 }
 </style>
 <div class="picture1">
@@ -38,19 +38,24 @@ background-color:cyan;
 <h2>Kindly fill in the following form</h2>
 </div>
 
+<br>
+<h2>Kindly fill in the following form</h2>
+</div>
+
 <div class="picture2">
  <h2>Sign Up</h2>    
-<form>Contact Us:>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="date"><br><br> <form name = "form1" action="write.php" method = "get" enctype = "multipart/form-data" > 
-
-<textarea type="text"  cols="95" rows="5"></textarea>&nbsp&nbsp&nbsp
-<input type="submit">
-</form>
 
 
+<form name = "form1" action="write.php" method = "post" enctype = "multipart/form-data" >  
+<div class = "container">    
+                <div class = "form_group">    
+                    <label>Mobile No.:</label>    
+                    <input type = "string" name = "mobileno" value = "" required/>   
+
+
+<input type="submit"></form>  
 
 </div>
 
-
 </html>
 </body>
-
