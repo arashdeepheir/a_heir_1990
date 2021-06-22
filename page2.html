@@ -1,18 +1,15 @@
-<html>    
-<head>    
-        <title>Registration Form</title>    
-</head>    
+<html>
 <body>
-<style>    
+<style>
 
 div.picture1
 {
 margin: 6px;
-border: 1px solid red;
+border: 1px solid green;
 float: top;
 width: 100%;
 height: auto%;
-background-color :blue;
+background-color :green;
 }
 
 div.picture1:hover
@@ -24,10 +21,10 @@ background-image: url("img11.gif")
 div.picture2 
 {
 margin: 5px;
-border: 1px solid pink;
+border: 1px solid green;
 float: left;
 width: 100%;
-background-color:red;
+background-color:#33FFB5;
 }
 
 div.picture2:hover {
@@ -36,31 +33,36 @@ background-image:url("img11.gif");
 }
 </style>
 <div class="picture1">
-<a href="webpage2.html"><img src="home.gif"></img></a>
+<a href="webpage.html"><img src="home.gif"></img></a>
 <br>
-<h2>Kindly fill in the following form</h2>
+<h2>Login</h2>
 </div>
-        <link href = "registration.css" type = "text/css" rel = "stylesheet" />    
-        <h2>Sign Up</h2>    
-        <form name = "form1" action="abcd.php" method = "post" enctype = "multipart/form-data" >    
-            <div class = "container">    
+
+<div class="picture2">
+ <h2>Logi Form</h2>    
+
+
+<form name = "form1" action="abcd.php" method = "post" enctype = "multipart/form-data" >  
+<div class = "container">    
                 <div class = "form_group">    
                     <label>First Name:</label>    
                     <input type = "text" name = "fname" value = "" required/>    
-                </div>    
-                 
-                <div class = "form_group">    
+                </div>  
+<div class = "form_group">    
                     <label>Last Name:</label>    
                     <input type = "text" name = "lname" value = "" required/>    
                 </div>    
-                <div class = "form_group">    
-                    <label>Password:</label>    
-                    <input type = "password" name = "pwd" value = "" required/>    
+<div class = "form_group">    
+                    <label>Email Id:</label>    
+                    <input type = "email" name = "pwd" value = "" required/>    
                 </div>   <form>
 
-
 <input type="submit"></form> 
-            </div> <form action="abcd.php" method="GET">   
-        </form>    
-    </body>    
-</html>    
+
+
+
+</div>
+
+
+</html>
+</body>
