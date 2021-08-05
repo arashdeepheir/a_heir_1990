@@ -16,7 +16,7 @@ import java.util.Scanner;
     public static void main(String[] args)
     {
     	
-    	int[] a;
+    	int[] a= new int[8];
     	int ch,num;
         do    
         {
@@ -27,6 +27,7 @@ import java.util.Scanner;
             ch = scan.nextInt();            
             switch (ch)
             {
+		
             case 1 : 
             {
                 System.out.println("\nEnter numbers::");
@@ -40,7 +41,7 @@ import java.util.Scanner;
             	for(i=0;i<8;i++)
             	{
             	
-            		System.out.println(a[i]+"\t");
+            		System.out.println(a[i] + "\t");
                 } 
 
             	System.out.println("\nEnter the number you want to search:: ");
