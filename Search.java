@@ -18,6 +18,7 @@ import java.util.Scanner;
     	
     	int[] a= new int[8];
     	int ch,num;
+        int i;
         do    
         {
         Scanner scan = new Scanner(System.in);
@@ -34,7 +35,7 @@ import java.util.Scanner;
             	for(i=0;i<8;i++)
             	{
             	
-            		int a[i] = scan.nextInt();
+            		a[i] = scan.nextInt();
                 }
             	System.out.println("\nEntered list of numbers::");
             	
