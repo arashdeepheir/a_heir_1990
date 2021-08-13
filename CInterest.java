@@ -16,7 +16,7 @@ class var1
         int r;
         int t;
         int n;
-     var1()
+     void var1()
      {
         Scanner scan= new Scanner(System.in);
         System.out.println("\nEnter principle amount:Rs ");
