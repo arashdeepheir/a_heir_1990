@@ -10,14 +10,15 @@
  */
 import java.util.Scanner;
 import java.lang.Math;
+
 public class Quad_equation {
     
 	 
     public static void main(String[] args)
     {
     	
-    	double num1,num2,num3,alpha,beta,a,b,c;
-        double d,det1,det2,det3;
+    	double a,b,c,num1,num2,num3,alpha,beta;
+        double d,det;
         int ch;
         
         do    
@@ -40,13 +41,11 @@ public class Quad_equation {
 
             	System.out.println("\n:: Quadratic Equation is " + a +"x^2+"+ b +"x+" + c +"=0" );
                 
-                det1=(b*b);
-		det2=(4*a*c);
-		det3=det1-det2;
+                det=b*b-4*a*c;
                 
-            	System.out.println("\n Determinent of the Quadratic Equation is "+ det3);
+            	System.out.println("\n Discriminent of the Quadratic Equation is "+ det);
                 
-            	d=Math.sqrt(det3);
+            	d=(int) Math.sqrt(det);
                 
                 num1=-b+d;
                 num2=2*a;
