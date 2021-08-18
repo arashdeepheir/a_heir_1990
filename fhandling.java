@@ -30,12 +30,12 @@ return x;
 class fhandling 
 {
     
-public static void agegroup(int x)
+static int agegroup(int x)
 {       
 System.out.println("enter your age group(age must be 18 and above\n");
 Scanner scan= new Scanner(System.in);
 x=scan.nextInt();
-	
+	return x;
 	/*if(x>18&&x<25)
 	{
 		return 0.33;
@@ -55,7 +55,7 @@ x=scan.nextInt();
 	 */
 }
 
-static void sex(char x)
+static char sex(char x)
 
 {
 	
@@ -63,6 +63,7 @@ static void sex(char x)
 	System.out.println("\nEnter your sex\n");
 	Scanner scan= new Scanner(System.in);
         x=scan.next().charAt(5);
+        return x;
 	/*
 	if(x==m)
 	
@@ -79,14 +80,14 @@ static void sex(char x)
 
 }
 
-static void income(float x)
+static float income(float x)
 
 {
 	
 	System.out.println("\n Enter your income range\n");
 	Scanner scan= new Scanner(System.in);
         x=scan.nextFloat();
-	
+	return x;
 /*	if(x>10000&&x<20000)
 	
 	{
@@ -108,22 +109,25 @@ static void income(float x)
 	
 
 
-static void genre(char x)
+static char genre(char x)
 {
 
 System.out.println("\n Enter Genre of Movie");
 
 Scanner scan= new Scanner(System.in);
 x=scan.next().charAt(8);
+return x;
 }
     
+ 
 public static void main(String args[]) 
     {
 
 	int ch;
-        int a;
-        char b,d;
-        float c;
+        int a = 0,x;
+        char b = 0,d = 0,y1,y2;
+        float c = 0,z;
+       
        	
 System.out.println("\nDo you want to run the program?(press 1 to enter/press 2 to exit)");
 Scanner Scan=new Scanner(System.in);
@@ -138,9 +142,25 @@ do{
 	case 1:
         {
             
-            System.out.println("enter 2 datasets");
-
-            try {
+            System.out.println("enter 1 datasets");
+            
+            
+             
+             x=agegroup(a);
+             
+             
+             y1= sex(b);
+            
+             z=income(c);
+             
+             y2=genre(d);
+             System.out.println("Agegroup of customer is/t" + x);
+             System.out.println("Sex of customer is/t" + y1);
+             System.out.println("Income of customer is/t" + z);
+             System.out.println("Genre of movie selected by customeris /t" + y2);
+             
+             
+            /*try {
             File myObj = new File("filename.txt");
             if (myObj.createNewFile()) {
             System.out.println("File created: " + myObj.getName());
@@ -151,12 +171,8 @@ do{
             catch (IOException e) 
             {
              System.out.println("An error occurred.");
-             e.printStackTrace();
+             e.printStackTrace();*/
              
-             agegroup(a);
-             sex(b);
-             income(c);
-             genre(d);
              
             try {
             FileWriter myWriter = new FileWriter("filename.txt");
@@ -175,7 +191,7 @@ do{
              
              break;
             }
-        }
+        
 	
 
 
@@ -197,7 +213,5 @@ do{
 	
 
 
-        // TODO code application logic here
-    }
-}
+       
 
