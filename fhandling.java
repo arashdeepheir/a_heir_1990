@@ -147,17 +147,13 @@ do{
             
              
              x=agegroup(a);
-             
-             
              y1= sex(b);
-            
              z=income(c);
-             
              y2=genre(d);
-             System.out.println("Agegroup of customer is/t" + x);
+             /*System.out.println("Agegroup of customer is/t" + x);
              System.out.println("Sex of customer is/t" + y1);
              System.out.println("Income of customer is/t" + z);
-             System.out.println("Genre of movie selected by customeris /t" + y2);
+             System.out.println("Genre of movie selected by customeris /t" + y2);*/
              
              
             /*try {
@@ -176,7 +172,8 @@ do{
              
             try {
             FileWriter myWriter = new FileWriter("filename.txt");
-            myWriter.write("Files in Java might be tricky, but it is fun enough!");
+            myWriter.write("\nAgegroup of customer is"+x+"\nSex of customer is"+y1);
+            myWriter.write("\nIncome of customer is"+z+"\nGenre of movie selected by customer is"+y2+"\n");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
     
