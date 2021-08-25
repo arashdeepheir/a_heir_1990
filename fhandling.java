@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 import java.util.Scanner;
-import java.io.File;  
+//import java.io.File;  
 import java.io.IOException;
 import java.io.FileWriter;
 /**
@@ -62,7 +62,7 @@ static char sex(char x)
 	//char m,f;
 	System.out.println("\nEnter your sex\n");
 	Scanner scan= new Scanner(System.in);
-        x=scan.next().charAt(5);
+        x=scan.next().charAt(0);
         return x;
 	/*
 	if(x==m)
@@ -115,7 +115,7 @@ static char genre(char x)
 System.out.println("\n Enter Genre of Movie");
 
 Scanner scan= new Scanner(System.in);
-x=scan.next().charAt(8);
+x=scan.next().charAt(0);
 return x;
 }
     
@@ -128,13 +128,13 @@ public static void main(String args[])
         char b = 0,d = 0,y1,y2;
         float c = 0,z;
        
-       	
+ do{      	
 System.out.println("\nDo you want to run the program?(press 1 to enter/press 2 to exit)");
 Scanner Scan=new Scanner(System.in);
 ch= Scan.nextInt();
 
 
-do{
+
 
 	switch(ch)
 	{
@@ -142,7 +142,7 @@ do{
 	case 1:
         {
             
-            System.out.println("enter 1 datasets");
+            System.out.println("enter 1st datasets");
             
             
              
@@ -150,6 +150,37 @@ do{
              y1= sex(b);
              z=income(c);
              y2=genre(d);
+              try {
+            FileWriter myWriter = new FileWriter("filename.txt");
+            myWriter.write("\nAgegroup of customer is"+x+"\nSex of customer is"+y1);
+            myWriter.write("\nIncome of customer is"+z+"\nGenre of movie selected by customer is"+y2+"\n");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+    
+            } catch (IOException f) {
+            System.out.println("An error occurred.");
+            f.printStackTrace();
+            }
+             
+             System.out.println("enter 2st datasets");
+            
+            
+             
+             x=agegroup(a);
+             y1= sex(b);
+             z=income(c);
+             y2=genre(d);
+              try {
+            FileWriter myWriter = new FileWriter("filename.txt");
+            myWriter.write("\nAgegroup of customer is"+x+"\nSex of customer is"+y1);
+            myWriter.write("\nIncome of customer is"+z+"\nGenre of movie selected by customer is"+y2+"\n");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+    
+            } catch (IOException f) {
+            System.out.println("An error occurred.");
+            f.printStackTrace();
+            }
              /*System.out.println("Agegroup of customer is/t" + x);
              System.out.println("Sex of customer is/t" + y1);
              System.out.println("Income of customer is/t" + z);
@@ -170,32 +201,12 @@ do{
              e.printStackTrace();*/
              
              
-            try {
-            FileWriter myWriter = new FileWriter("filename.txt");
-            myWriter.write("\nAgegroup of customer is"+x+"\nSex of customer is"+y1);
-            myWriter.write("\nIncome of customer is"+z+"\nGenre of movie selected by customer is"+y2+"\n");
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-    
-            } catch (IOException f) {
-            System.out.println("An error occurred.");
-            f.printStackTrace();
-            }
-             
-             
-             
-             
-             
-             break;
-            }
         
-	
-
-
-	case 2:
+            break;
+            }
+       	case 2:
 		{
-		
-	System.exit(0);
+		System.exit(0);
         break;
 }
 }
