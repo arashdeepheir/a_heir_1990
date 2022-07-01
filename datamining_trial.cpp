@@ -2,7 +2,7 @@
 #include<conio.h>
 #include<iostream>
 #include<fstream>
-
+//manually creating first set of datasets for a trial version of data mining. To predict better it needs more and more datasets of different subsets which the customer can give himself
 using namespace std;
 
 float agegroup(float x)
@@ -88,7 +88,7 @@ int genre(int x)
 {
 //int ch;
 cout<<"\n Enter Genre of Movie\n";
-cout<<"\nEnter your choice"<<"\nEnter 1 for comedy/Enter 2 for romance/Enter 3 for romcom";
+cout<<"\nEnter your choice"<<"\nEnter 1 for comedy/Enter 2 for romance/Enter 3 for romcom/Enter 4 for thriller";
 cin>>x;
 /*for(i=0;i<6;i++)
 {
@@ -101,16 +101,20 @@ for(i=0;i<6;i++)
 {*/
 if (x==1)
 	{
-		return 0.33;
+		return 0.25;
 	}
 if (x==2)
 	{
-		return 0.33;
+		return 0.25;
 	}
 if (x==3)
 	{
-		return 0.33;
+		return 0.25;
 	}	
+if(x==4)
+	{
+		return 0.25;
+	}
 	
 
 
