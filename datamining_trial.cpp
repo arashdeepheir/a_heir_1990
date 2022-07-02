@@ -2,7 +2,10 @@
 #include<conio.h>
 #include<iostream>
 #include<fstream>
-//manually creating first set of datasets for a trial version of data mining. To predict better it needs more and more datasets of different subsets which the customer can give himself
+
+/*manually creating first set of datasets for a trial version of data mining. To predict better it needs more and more datasets 
+of different subsets which the customer can give himself voluntarily rather than data collecting to make prediction more refined*/
+
 using namespace std;
 
 float agegroup(float x)
@@ -60,7 +63,7 @@ float income(float x)
 
 {
 	
-	cout<<"\n Enter your income range\n";
+	cout<<"\nEnter your income range\n";
 	cin>>x;
 	
 	if(x>10000&&x<20000)
@@ -128,7 +131,7 @@ char datamining(char x)
 
 {
 //if x ranges from x to 1 probabilty y (repaeat for other genre of movies)
-//create a large dataset of 40 to 50 entries then try with data mining which genre of movie a person might buy using naive bayes
+//create a large dataset of 400 to 500 entries then try with data mining which genre of movie a person might buy using naive bayes probabilty
 
 return x;	
 }
@@ -147,33 +150,29 @@ int file(int age,char s,int inc, int gen)
 	{
 	
 	g[i]=genre(d);
-    }*/	  
-fstream my_file;
-		
-		
-		
-	my_file.open("filename.txt", ios::out);                     
-		fstream MyFile("filename.txt");
-		my_file<<"\n";
-		my_file <<age<<"\t";			
-		my_file<<s<<"\t";
-		my_file<<inc<<"\t";
-		
-		my_file<<gen<<"\t";
+    }*/	 
 	
-		my_file.close();
-				if (!my_file) {
-		cout << "File not created!";
-	}
-	else {
-		cout << "File updated successfully!\n";
-	}
-
-	
+	//log.open("filename.txt", fstream::app); 
+	fstream my_file;	
+	my_file.open("filename.txt", fstream::app);                     
+	fstream MyFile("filename.txt");
+	my_file<<"\n";
+	my_file <<age<<"\t";			
+	my_file<<s<<"\t";
+	my_file<<inc<<"\t";
+	my_file<<gen<<"\t";
+	my_file.close();
+		if (!my_file)
+		 {
+			cout << "File not created!";
+		}
+		else
+		{
+			cout << "File updated successfully!\n";
+		}
 
 	return 0;
 	
-
 }
 
 int main()
