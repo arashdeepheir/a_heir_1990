@@ -41,17 +41,17 @@ public class Quad_equation {
 
             	System.out.println("\n:: Quadratic Equation is " + a +"x^2+"+ b +"x+" + c +"=0" );
                 
-                det=b*b-4*a*c;
+                det=(b)*(b)-(4*(a)*(c));
                 
             	System.out.println("\n Discriminent of the Quadratic Equation is "+ det);
                 
             	d=(int) Math.sqrt(det);
                 
-                num1=-b+d;
-                num2=2*a;
-                num3=-b-d;
-                alpha=num1/num2;
-                beta=num3/num2;
+                num1=-(b)+(d);
+                num2=2*(a);
+                num3=-(b)-(d);
+                alpha=(num1)/(num2);
+                beta=(num3)/(num2);
                 System.out.println("\n Roots of the Quadratic Equation are " + alpha + "\t"+ beta);
                
             }   
