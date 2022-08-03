@@ -9,6 +9,15 @@ package com.mycompany.mavenproject1;
  * @author Heir
  */
 /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
+ */
+
+/**
+ *
+ * @author Heir
+ */
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -19,6 +28,9 @@ package com.mycompany.mavenproject1;
  * @author arash*/
 import java.util.Scanner;
 import java.lang.Math;
+
+import java.util.Scanner;
+
 class var1
  {
     
@@ -41,7 +53,7 @@ class var1
         
      }
     
-  public void compound(int CI)
+  public int compound(int CI)
     {
      int num,num1,num2,num3;
      int ch;
@@ -78,16 +90,16 @@ class var1
             }
           }        
         
-         
+         return CI;
          }while(true);
      
     }
     
     
-   public void simple(int SI,int amount)
+   public int simple(int SI)
     {
         int p,r,t;
-        //int amount;
+        int amount;
         
         
         
@@ -113,9 +125,11 @@ class var1
         t= scan.nextInt();
         
         SI=p*r*t/100;
+        
         amount=SI+p;
         System.out.println("\nAmount before simple interest applied: Rs"+ p);
         System.out.println("\nAmount after simple interest applied: Rs"+ amount);
+        
         break;
         }
             case 2:{
@@ -124,24 +138,50 @@ class var1
             }
             
         }
+        return SI;
         }while(true);      
     }
      
     
+}
 
-    class Interest 
+class Interest extends var1 
 {
-   
-     
+  
      public static void main(String[] args)
     {
-        int a,b,c;
+        int a,b;
+        int x,y;
         
-        compound(a);
-        simple(b,c);
         
+        do{
+          
+        Scanner scan = new Scanner(System.in);
+        System.out.println("\nPress 1 for Compound Interest/Press 2 for Simple Interest)");
+                  
+ 
+        int ch = scan.nextInt();            
+        switch (ch)
+        {
+            
+        case 1:
+        {
+        x=compound(a);
+        System.out.println("\nCompound Interest is: Rs"+ x);
+        break;
+        }
+        case 2:{
+        y=simple(b);
+        System.out.println("\nSimple Interest is: Rs"+ y);
+        
+        break;
+            }
+            
+        }
+        }while(true);
         
     }
+    
 }
-}
+
 
