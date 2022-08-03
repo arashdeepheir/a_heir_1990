@@ -31,7 +31,7 @@ import java.lang.Math;
 
 import java.util.Scanner;
 
-class var1
+class var1 extends Interest
  {
     
         int p,r,t,n;
@@ -145,7 +145,7 @@ class var1
     
 }
 
-class Interest extends var1 
+class Interest 
 {
   
      public static void main(String[] args)
@@ -166,12 +166,12 @@ class Interest extends var1
             
         case 1:
         {
-        x=compound(a);
+        x=compound(CI);
         System.out.println("\nCompound Interest is: Rs"+ x);
         break;
         }
         case 2:{
-        y=simple(b);
+        y=simple(SI);
         System.out.println("\nSimple Interest is: Rs"+ y);
         
         break;
