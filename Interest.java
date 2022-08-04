@@ -31,32 +31,16 @@ import java.lang.Math;
 
 import java.util.Scanner;
 
-class var1 extends Interest
- {
-    
-        int p,r,t,n;
-        
-     void var1()
-     {
-        Scanner scan= new Scanner(System.in);
-        System.out.println("\nEnter principle amount:Rs ");
-        p=scan.nextInt();
-        
-        System.out.println("\nEnter rate of interest: ");
-        r=scan.nextInt();
-      
-        System.out.println("\nEnter time period ");
-        t=scan.nextInt();
-      
-        System.out.println("\nNumber of times interest applied ");
-        n=scan.nextInt();
-        
-     }
-    
-  public int compound(int CI)
+class Interest 
+{
+  
+     public void compound(int CI)
     {
+        int p,r,t,n;
      int num,num1,num2,num3;
      int ch;
+  
+        
      do
      {
      Scanner choice=new Scanner(System.in);
@@ -68,18 +52,30 @@ class var1 extends Interest
 		
             case 1 : 
             {
-            var1 obj= new var1();
-            obj.var1();
+                   Scanner scan= new Scanner(System.in);
+        System.out.println("\nEnter principle amount:Rs ");
+        p=scan.nextInt();
+        
+        System.out.println("\nEnter rate of interest: ");
+        r=scan.nextInt();
+      
+        System.out.println("\nEnter time period ");
+        t=scan.nextInt();
+      
+        System.out.println("\nNumber of times interest applied ");
+        n=scan.nextInt();
+           // var1 obj= new var1();
+            //obj.var1();
     
-            num1=obj.r/obj.n;
+            num1=r/n;
             num2=1+num1;
-            num=obj.n*obj.t;
+            num=n*t;
             num3=(int) Math.pow(num2,num);
 
-            CI=obj.p*num3;
-            System.out.println("\n Amount before Compound Interest applied: Rs"+obj.p);
+            CI=p*num3;
+            System.out.println("\n Amount before Compound Interest applied: Rs"+p);
             System.out.println("\n Amount before Compound Interest applied: Rs"+CI);
-            System.out.println("\n Compound Interest : Rs"+(CI-obj.p));
+            System.out.println("\n Compound Interest : Rs"+(CI-p));
             break;
             }
             
@@ -90,13 +86,13 @@ class var1 extends Interest
             }
           }        
         
-         return CI;
+         //return CI;
          }while(true);
      
     }
     
     
-   public int simple(int SI)
+   public void simple(int SI)
     {
         int p,r,t;
         int amount;
@@ -138,16 +134,10 @@ class var1 extends Interest
             }
             
         }
-        return SI;
+       // return SI;
         }while(true);      
     }
      
-    
-}
-
-class Interest 
-{
-  
      public static void main(String[] args)
     {
         int a,b;
@@ -166,13 +156,13 @@ class Interest
             
         case 1:
         {
-        x=compound(CI);
-        System.out.println("\nCompound Interest is: Rs"+ x);
+        compound(a);
+        //System.out.println("\nCompound Interest is: Rs"+ x);
         break;
         }
         case 2:{
-        y=simple(SI);
-        System.out.println("\nSimple Interest is: Rs"+ y);
+        simple(b);
+        //System.out.println("\nSimple Interest is: Rs"+ y);
         
         break;
             }
@@ -180,8 +170,13 @@ class Interest
         }
         }while(true);
         
-    }
     
+    }
 }
+    
+
+   
+
+
 
 
